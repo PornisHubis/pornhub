@@ -8,11 +8,25 @@
 			background-image: url("nedladdning.png");
 			background-size: cover;
 		}
+	  .hidden {
+  display: none;
+}
+
 	</style>
   </head>
   <body>
+	  <div id="minDiv">Detta element kommer att bli osynligt</div>
+
   <script>
-var profiler = [
+function visaElement() {
+  var element = document.getElementById("minDiv");
+  element.classList.remove("hidden");
+}
+
+// Kör funktionen genom att skriva "visaElement()" i webbläsarkonsolen
+
+	  
+	  var profiler = [
   { användarnamn: "användare1", lösenord: "lösenord1" },
   { användarnamn: "användare2", lösenord: "lösenord2" }
 ];
@@ -35,6 +49,7 @@ function loggaIn() {
   if (inloggad) {
     console.log("Inloggningen lyckades!");
     // Här kan du utföra ytterligare åtgärder när användaren är inloggad
+	  visaElement();
   } else {
     console.log("Fel användarnamn eller lösenord. Försök igen.");
   }
