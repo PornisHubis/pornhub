@@ -11,5 +11,37 @@
 	</style>
   </head>
   <body>
-  </body>
+  <script>
+var profiler = [
+  { användarnamn: "användare1", lösenord: "lösenord1" },
+  { användarnamn: "användare2", lösenord: "lösenord2" }
+];
+
+function loggaIn() {
+  var inmatatAnvändarnamn = prompt("Användarnamn:");
+  var inmatatLösenord = prompt("Lösenord:");
+
+  var inloggad = false;
+  for (var i = 0; i < profiler.length; i++) {
+    if (
+      inmatatAnvändarnamn === profiler[i].användarnamn &&
+      inmatatLösenord === profiler[i].lösenord
+    ) {
+      inloggad = true;
+      break;
+    }
+  }
+
+  if (inloggad) {
+    console.log("Inloggningen lyckades!");
+    // Här kan du utföra ytterligare åtgärder när användaren är inloggad
+  } else {
+    console.log("Fel användarnamn eller lösenord. Försök igen.");
+  }
+}
+
+// Kör funktionen genom att skriva "loggaIn()" i webbläsarkonsolen
+
+	  </script>
+	</body>
 </html>
