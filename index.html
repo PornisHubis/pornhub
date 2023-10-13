@@ -5,9 +5,27 @@
     <link rel="icon" type="image/png" href="cornhub.png">
     <style>
       body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      /* Skapa en animation för att rulla bakgrundsbilden */
+      @keyframes scroll {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 100% 0;
+        }
+      }
+
+      /* Använd animationen på body */
+      body {
         background-image: url("nedladdning.png");
-        background-attachment: fixed;
         background-repeat: repeat;
+        background-size: auto;
+        animation: scroll 10s linear infinite;
       }
     </style>
   </head>
