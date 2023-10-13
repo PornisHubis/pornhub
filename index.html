@@ -2,61 +2,16 @@
 <html>
   <head>
     <title>PornHub | Din Everyday Porrsida</title>
-        <link rel="icon" type="image/png" href="cornhub.png">
-  <style>
-		body {
-			background-image: url("nedladdning.png");
-			background-size: cover;
-		}
-	  .hidden {
-  display: none;
-}
-
-	</style>
+    <link rel="icon" type="image/png" href="cornhub.png">
+    <style>
+      body {
+        background-image: url("nedladdning.png");
+        background-attachment: fixed;
+        background-repeat: repeat;
+        background-size: cover;
+      }
+    </style>
   </head>
   <body>
-	  <div id="minDiv">Detta element kommer att bli osynligt</div>
-
-  <script>
-function visaElement() {
-  var element = document.getElementById("minDiv");
-  element.classList.remove("hidden");
-}
-
-// Kör funktionen genom att skriva "visaElement()" i webbläsarkonsolen
-
-	  
-	  var profiler = [
-  { användarnamn: "användare1", lösenord: "lösenord1" },
-  { användarnamn: "användare2", lösenord: "lösenord2" }
-];
-
-function loggaIn() {
-  var inmatatAnvändarnamn = prompt("Användarnamn:");
-  var inmatatLösenord = prompt("Lösenord:");
-
-  var inloggad = false;
-  for (var i = 0; i < profiler.length; i++) {
-    if (
-      inmatatAnvändarnamn === profiler[i].användarnamn &&
-      inmatatLösenord === profiler[i].lösenord
-    ) {
-      inloggad = true;
-      break;
-    }
-  }
-
-  if (inloggad) {
-    console.log("Inloggningen lyckades!");
-    // Här kan du utföra ytterligare åtgärder när användaren är inloggad
-	  visaElement();
-  } else {
-    console.log("Fel användarnamn eller lösenord. Försök igen.");
-  }
-}
-
-// Kör funktionen genom att skriva "loggaIn()" i webbläsarkonsolen
-
-	  </script>
-	</body>
+  </body>
 </html>
